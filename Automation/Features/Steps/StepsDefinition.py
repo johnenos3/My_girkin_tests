@@ -1,5 +1,6 @@
 from behave import *
 from selenium.webdriver import Chrome
+import time
 
 
 @given(u'User open browser, enter URL and go to the app')
@@ -28,6 +29,7 @@ def step_impl(context):
 
 @then(u'User see checkbox of Terms agreement and click on it')
 def step_impl(context):
+    time.sleep(2)
     assert context.driver.find_element_by_id('gdpr-checkbox-custom-policy').is_displayed()
     context.driver.find_element_by_id('gdpr-checkbox-policy').click()
 
