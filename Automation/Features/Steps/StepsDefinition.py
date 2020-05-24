@@ -4,7 +4,7 @@ from selenium.webdriver import Chrome
 
 @given(u'User open browser, enter URL and go to the app')
 def step_impl(context):
-    path = "C:\\Users\\hlop4\\PycharmProjects\\drivers\\chromedriver.exe"
+    path = "C:\\CodeRepository\\Automation\\drivers\\chromedriver.exe"
     context.driver = Chrome(executable_path=path)
     context.driver.get('https://essayshark.com/')
 
