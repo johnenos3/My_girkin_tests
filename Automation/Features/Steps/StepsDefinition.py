@@ -30,8 +30,10 @@ def step_impl(context):
 @then(u'User see checkbox of Terms agreement and click on it')
 def step_impl(context):
     time.sleep(2)
-    assert context.driver.find_element_by_id('gdpr-checkbox-custom-policy').is_displayed()
     context.driver.find_element_by_id('gdpr-checkbox-policy').click()
+    assert context.driver.find_element_by_id('gdpr-checkbox-custom-policy').is_displayed()
+    time.sleep(2)
+
 
 
 # @then(u'User should be registered successfully and be on new order page of customer cabinet')
